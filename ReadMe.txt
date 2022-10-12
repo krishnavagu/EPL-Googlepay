@@ -6,7 +6,7 @@ sample routes as a WAR. You can build the WAR by running
 
     mvn install
 
-     mvn clean install
+     mvn clean install , mvn clean install , mvn clean install , mvn clean install
 
 You can then run the project by dropping the WAR into your 
 favorite web container or just run
