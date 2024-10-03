@@ -1,22 +1,13 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
+        stage('Git Hub') { 
             steps {
                 echo"Build stage"
                 git credentialsId: 'GITHUB', url: 'https://github.com/krishnavagu/EPL-Googlepay.git'
             }
         }
-pipeline {
-    agent any 
-    stages {
         stage('Build') { 
-            steps {
-                echo"Build stage"
-                git credentialsId: 'GITHUB', url: 'https://github.com/krishnavagu/EPL-Googlepay.git'
-            }
-        }
-        stage('Test') { 
             steps {
                 echo"Test Stage"
                 sh label: '', script: 'mvn clean package'
